@@ -7,7 +7,7 @@ const Signup = () => {
 
   const [name , setName] = useState("")
   const [email , setEmail] = useState('')
-  const [password , setPassowrd] = useState("")
+  const [password , setPassword] = useState("")
   const [message , setMessage] = useState("")
   const nav = useNavigate()
  
@@ -23,6 +23,8 @@ const Signup = () => {
       setMessage(`Error ${error.message}`)
     }
   }
+  console.log(name);
+  
 
   return (
     <div className="signup-container">
@@ -37,7 +39,7 @@ const Signup = () => {
             <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} required />
           </div>
           <div className="input-group">
-            <input type="password" placeholder="Password" required onChange={(e)=>setPassowrd(e.target.value)} />
+            <input type="password" placeholder="Password" required onChange={(e)=>setPassword(e.target.value)} />
           </div>
           <button type="submit" className="signup-button">Sign Up</button>
         </form>
